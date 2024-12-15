@@ -1,0 +1,746 @@
+/* Algemeen: Reset marges en paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body en container */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Verwijder horizontale scroll */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#navbar {
+    position: fixed;
+    top: 2%;
+    left: 50%; /* Plaats de navbar in het midden */
+    transform: translateX(-50%); /* Verschuif de navbar terug naar het midden */
+    background: rgba(255, 255, 255, 0.1); /* Transparante glass-look */
+    border-radius: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    z-index: 99;
+}
+
+/* Toevoegen van styling bij scroll */
+#navbar.scrolled {
+    position: fixed;
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(55, 31, 90, 0.69); /* Transparante glass-look */
+    border-radius: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    z-index: 99;
+    transition: background-color 0.3s ease-in-out; /* Zachte overgang */
+}
+
+
+
+/* Navbar links */
+#navbar a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 1rem; /* Standaard lettergrootte */
+}
+
+
+#navbar a.active {
+    font-weight: bold;
+    color: #ffffff; /* Of een kleur naar keuze */
+    text-decoration: underline; /* Optioneel */
+}
+
+
+/* Page content */
+.content {
+    padding: 16px;
+}
+
+/* Homepage sectie */
+.homepage {
+    width: 100%;
+    height: 100vh; /* Volledige schermhoogte */
+    background-image: url('/assets/images/Portfoliobg.png');
+    background-size: cover;
+    position: relative; /* Belangrijk voor z-index */
+    z-index: 1; /* Zet homepage op een lagere laag */
+}
+
+.homepage .portfoliotekst {
+    position: absolute;
+    top: -70px;
+    left: 100px;
+    font-family: "Konkhmer Sleokchher", system-ui;
+    color: #ffffff;
+    font-size: 350px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.homepage .beroep {
+    position: absolute;
+    top: 450px;
+    left: 110px;
+    font-family: "Konkhmer Sleokchher", system-ui;
+    color: #ffffff;
+    font-size: 72px;
+}
+
+.homepage .name {
+    position: absolute;
+    top: 375px;
+    left: 190px;
+    font-family: 'Konkhmer Sleokchher', Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 30px;
+    line-height: 55px;
+    background: rgba(255, 255, 255, 0.1); /* Transparante glass-look */
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: -3px;
+    padding-top: 5px;
+}
+
+.homepage .aboutme {
+    position: absolute;
+    top: 520px;
+    left: 110px;
+    font-family: 'inter', sans-serif;
+    color: #ffffff;
+    font-size: 20px;
+    width: 38%;
+}
+
+.homepage .runepng {
+    transform: scale(0.6);
+    position: absolute;
+    top: -570px;
+    left: 450px;
+    z-index: 0; /* Zet de afbeelding onder alles */
+}
+
+.homepage .toolstitle {
+    position: absolute;
+    top: 620px;
+    left: 250px;
+    font-family: 'Konkhmer Sleokchher', Helvetica, sans-serif;
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.homepage .toolsimages {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 680px;
+    left: 220px;
+    width: 350px;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 32px;
+    transform: scale(1.2);
+    background: rgba(255, 255, 255, 0.1); /* Transparante glass-look */
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 15px;
+
+}
+
+.homepage .icon {
+    position: relative;
+    border-radius: 10px;
+}
+
+.homepage .lagoonlogo {
+    position: absolute;
+    height: 125px;
+    width: auto;
+    top: 700px;
+    left: 750px;
+}
+
+/* Projects sectie */
+.projects {
+    width: 100%;
+    height: 100vh; /* Zorg ervoor dat de sectie volledig schermhoogte is */
+    background-image: url('/assets/images/Projectenbg.png');
+    background-size: cover;
+    background-position: center;
+    display: flex; /* Gebruik Flexbox voor algemene centrering */
+    justify-content: center; /* Horizontale centrering */
+    align-items: center; /* Verticale centrering */
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Titel stijl */
+.title {
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: 'Konkhmer Sleokchher', Helvetica, sans-serif;
+}
+
+
+/* Grid-layout voor projecten */
+.projecten {
+    display: grid; /* Gebruik CSS Grid */
+    justify-content: center; /* Horizontale centrering binnen de grid */
+    align-items: center; /* Verticale centrering binnen de grid */
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Responsive layout */
+    grid-gap: 20px; /* Ruimte tussen projectkaarten */
+    width: 100%; /* Vul de beschikbare ruimte */
+    max-width: 1100px; /* Beperk de breedte */
+    height: auto; /* Zorg dat de inhoud zijn natuurlijke hoogte behoudt */
+}
+
+/* Projectkaartstijl */
+.projects .project {
+    background: rgba(255, 255, 255, 0.1); /* Transparante glass-look */
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover-effect */
+.projects .project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* Afbeeldingstijl */
+.projects .project img {
+    width: calc(100% - 20px); /* Ruimte rondom de afbeelding */
+    height: auto;
+    border-radius: 15px;
+    margin: 10px; /* Gelijke ruimte rondom */
+    transition: transform 0.3s ease;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+}
+
+/* Hover-effect op afbeeldingen */
+.projects .project:hover img {
+    transform: scale(1.03);
+}
+
+.wplopdrachten {
+    width: 100%;
+    height: 100vh; /* Zorg ervoor dat de sectie volledig schermhoogte is */
+    background-image: url('/assets/images/WPLOpdrachtenbg.png');
+    background-size: cover;
+    background-position: center;
+    display: flex; /* Gebruik Flexbox voor algemene centrering */
+    justify-content: center; /* Horizontale centrering */
+    align-items: center; /* Verticale centrering */
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.wplopdrachten .title {
+    position: absolute;
+    top: 50px;
+}
+
+
+.wplopdrachten .title {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.opdrachten-container {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(15px);
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+}
+
+.opdracht {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    margin: 10px 0;
+    padding: 10px 20px;
+    color: white;
+    font-size: 1rem;
+}
+
+.opdracht p {
+    margin: 0;
+}
+
+.opdracht button {
+    background-color: white;
+    color: #140122;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.opdracht button:hover {
+    background-color: #150B20; /* Lichter paars bij hover */
+    color: white;
+}
+
+
+.eindreflectie {
+    width: 100%;
+    height: 100vh; /* Zorg ervoor dat de sectie volledig schermhoogte is */
+    background-image: url('/assets/images/Eindreflectiebg.png');
+    background-size: cover;
+    background-position: center;
+    display: flex; /* Gebruik Flexbox voor algemene centrering */
+    justify-content: center; /* Horizontale centrering */
+    align-items: center; /* Verticale centrering */
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.eindreflectie .title {
+    position: absolute;
+    top: 50px;
+}
+
+.eindreflectie-container {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    width: 90%;
+    max-width: 800px;
+}
+
+.eindreflectie p {
+    margin: 0;
+    color: white;
+}
+
+.testimonials {
+    width: 100%;
+    height: 100vh; /* Zorg ervoor dat de sectie volledig schermhoogte is */
+    background-image: url('/assets/images/reviews.png');
+    background-size: cover;
+    background-position: center;
+    display: flex; /* Gebruik Flexbox voor algemene centrering */
+    justify-content: center; /* Horizontale centrering */
+    align-items: center; /* Verticale centrering */
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.testimonials .title {
+    position: absolute;
+    top: 50px;
+}
+
+.testimonials .subtitle {
+    position: absolute;
+    top: 100px;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: 'Konkhmer Sleokchher', Helvetica, sans-serif;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column; /* Zorgt ervoor dat naam en tekst onder elkaar staan */
+    margin-top: 25px;
+    margin-left: 20px;
+}
+.klanten {
+    display: grid; /* Gebruik CSS Grid */
+    justify-content: center; /* Horizontale centrering binnen de grid */
+    align-items: center; /* Verticale centrering binnen de grid */
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Responsive layout */
+    grid-gap: 20px; /* Ruimte tussen projectkaarten */
+    width: 100%; /* Vul de beschikbare ruimte */
+    max-width: 1100px; /* Beperk de breedte */
+    height: auto; /* Zorg dat de inhoud zijn natuurlijke hoogte behoudt */
+
+.klant {
+    display: flex; /* Gebruik Flexbox om de inhoud naast elkaar te plaatsen */
+    padding: 3vh;
+    max-width: 600px;
+    text-align: left;
+    transition: transform 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(15px);
+    color: white;
+}
+
+.klant:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.profielfoto {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-right: 5px; /* Ruimte tussen foto en tekst */
+}
+
+.klant-content {
+    display: flex;
+    flex-direction: column; /* Plaatst naam en review onder elkaar */
+    justify-content: center; /* Centreert verticaal */
+}
+
+.klantnaam {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.review {
+    font-size: 0.6rem;
+    margin: 5px 0 0 0; /* Verklein de bovenste marge */
+    line-height: 1.4;
+}
+
+
+/* Algemene animatie-instellingen */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Portfoliotekst animatie */
+.homepage .portfoliotekst {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Beroep animatie */
+.homepage .beroep {
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+/* Naam animatie */
+.homepage .name {
+    animation: fadeInUp 2s ease-out forwards;
+}
+
+/* About me animatie */
+.homepage .aboutme {
+    animation: fadeInUp 2.5s ease-out forwards;
+}
+
+/* Toolstitle animatie */
+.homepage .toolstitle {
+    animation: fadeInUp 3s ease-out forwards;
+}
+
+.projects .title {
+    animation: fadeInUp 3.5s ease-out forwards;
+}
+.projects .project {
+    animation: fadeInUp 3.5s ease-out forwards;
+}
+
+
+@media screen and (max-width: 480px)
+{
+    #navbar {
+        width: 40%;
+        padding: 5px;
+        font-size: 0.3rem; /* Verklein de tekst */
+    }
+
+    #navbar a {
+        font-size: 0.3rem;
+        padding: 5px;
+    }
+
+    .homepage {
+        width: auto;
+
+
+    }
+    .portfoliotekst {
+        position: absolute;
+        top: -20px;
+        left: 100px;
+        font-size: 200px;
+    }
+}
+}
+
+/* Tabletweergave (max-breedte: 768px) */
+@media screen and (max-width: 768px) {
+    body {
+        background-size: contain; /* Zorg dat de achtergrondafbeelding volledig zichtbaar blijft */
+    }
+
+    #navbar {
+        position: fixed;
+        padding: 5px;
+        font-size: 0.3rem; /* Verklein de tekst */
+        left: 17%;
+        top: 1%;
+    }
+
+    #navbar a {
+        font-size: 0.4rem;
+        padding: 4px;
+    }
+
+    .homepage {
+        background-repeat:no-repeat;
+        background-size: 800px;
+        background-position:center;
+        height: 400px;
+        width: 135%;
+    }
+
+    .homepage .portfoliotekst {
+        font-size: 75px;
+        top: 50px;
+        left: 10px;
+    }
+
+    .homepage .beroep {
+        font-size: 20px;
+        left: 15px;
+        top: 160px;
+    }
+
+    .homepage .name {
+        font-size: 7px;
+        top: 150px;
+        left: 35px;
+        padding-top: 0px;
+        line-height: 10px;
+        border-radius: 10px;
+    }
+    .homepage .runepng {
+        transform: scale(0.2);
+        left: -570px;
+        top: -860px;
+    }
+
+    .homepage .toolstitle {
+        font-size: 10px;
+        left: 20px;
+        top: 270px;
+    }
+
+    .homepage .toolsimages {
+        transform: scale(0.3);
+        left: -105px;
+        top: 270px;
+    }
+
+    .homepage .aboutme {
+        font-size: 10px;
+        left: 15px;
+        top: 180px;
+    }
+
+    .projects {
+        background-repeat:no-repeat;
+        background-size: 1200px;
+        background-position:center;
+        height: 800px;
+        width: 135%;
+    }
+
+    .projecten {
+        display: flex;
+        flex-direction: column;
+        margin-left: -18%;
+        margin-top: 10%;
+    }
+
+    .project {
+        flex-direction: column; /* Zet de projecten onder elkaar */
+
+    }
+
+    .projects .title {
+        font-size: 1.2rem;
+        position: relative;
+        left: -50px;
+    }
+
+    .projects .project {
+        width: 250px;
+    }
+
+    .wplopdrachten {
+        background-repeat:no-repeat;
+        background-size: 1200px;
+        background-position:center;
+        height: 600px;
+        width: 135%;
+    }
+
+    .wplopdrachten .title {
+        font-size: 1.2rem;
+        position: absolute;
+        left: 90px;
+    }
+
+    .opdrachten-container {
+        margin-top: 50px;
+        margin-left: -90px;
+        width: 75%
+    }
+
+    .opdracht {
+        font-size: 10px;
+    }
+
+    .opdracht button {
+        padding: 5px;
+        font-size: 0.3rem;
+    }
+
+    .eindreflectie {
+        background-repeat:no-repeat;
+        background-size: 1600px;
+        background-position:center;
+        height: 1000px;
+        width: 135%;
+    }
+
+    .eindreflectie-container {
+        padding: 20px;
+        margin-left: -100px;
+        margin-top: 100px;
+        max-width: 70%;
+    }
+
+    .eindreflectie p {
+        font-size: 0.75rem;
+    }
+
+    .eindreflectie .title {
+        font-size: 1.2rem;
+        position: absolute;
+        left: 80px;
+    }
+
+    .testimonials {
+        background-repeat:no-repeat;
+        background-size: cover;
+        background-position:center;
+        height: 800px;
+        width: 135%;
+    }
+    .testimonials .title {
+        font-size: 1.2rem;
+        position: absolute;
+        left: 90px;
+    }
+    .testimonials .subtitle {
+        font-size: 1rem;
+        position: absolute;
+        left: 20px;
+        top: 90px;
+    }
+    .klanten {
+        grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); /* Responsive layout */
+        margin-top: 50px;
+    }
+    .klanten .klantnaam{
+        font-size: 1rem;
+    }
+
+    .klanten .review {
+        font-size: 0.6rem;
+    }
+    .klanten .klant {
+        max-width: 280px;
+        padding: 1vh;
+    }
+    .klanten .profielfoto {
+        width: 60px;
+        height: 60px;
+    }
+
+    .text-content {
+        margin-top: 10px;
+    }
+
+
+
+}
+
+/* Extra grote schermen (min-breedte: 1200px) */
+@media screen and (min-width: 1200px) {
+    body {
+        background-size: cover; /* Voor ultrabrede schermen */
+    }
+
+    #navbar {
+        width: 70%;
+        padding: 20px;
+    }
+
+    .portfolioimage {
+        transform: scale(1); /* Normale schaal */
+    }
+}
+

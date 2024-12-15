@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Konkhmer Sleokchher', Helvetica, sans-serif;
+    overflow-x: hidden;
+    width: 100%;
+    height: auto;
+    background-image: url('/assets/images/projectsbackground.png');
+    background-size: cover;
+    position: relative; /* Belangrijk voor z-index */
+}
+
+#navbar {
+    position: fixed;
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.1); /* Transparante glass-look */
+    border-radius: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    z-index: 99;
+    transition: background-color 0.3s ease-in-out; /* Zachte overgang */
+}
+
+/* Toevoegen van styling bij scroll */
+#navbar.scrolled {
+    position: fixed;
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(55, 31, 90, 0.69); /* Transparante glass-look */
+    border-radius: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    z-index: 99;
+    transition: background-color 0.3s ease-in-out; /* Zachte overgang */
+}
+
+/* Navbar links */
+#navbar a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.project {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 2281px;
+}
+
+.portfolioimage {
+    transform: scale(0.85);
+    padding: 20px;
+    line-height: 60px;
+    background: rgba(255, 255, 255, 0.1); /* Transparante glass-look */
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+
+/* Standaard desktopstijl zoals hierboven */
+
+/* Tabletweergave (max-breedte: 768px) */
+@media screen and (max-width: 768px) {
+    body {
+        background-size: contain; /* Zorg dat de achtergrondafbeelding volledig zichtbaar blijft */
+        height: 550px;
+    }
+
+    #navbar {
+        position: fixed;
+        padding: 5px;
+        font-size: 0.3rem; /* Verklein de tekst */
+        left: 50%;
+        top: 1%;
+        width: 70%
+    }
+
+    #navbar a {
+        font-size: 0.4rem;
+        padding: 4px;
+    }
+    #navbar.scrolled {
+        padding: 5px;
+    }
+
+    .project {
+        flex-direction: column; /* Zet de projecten onder elkaar */
+        align-items: center;
+        height: 650px;
+    }
+
+    .portfolioimage {
+        transform: scale(0.07); /* Iets kleiner op tablets */
+        padding: 150px;
+        border-radius: 220px;
+        margin-top: 20px;
+    }
+}
+
+/* Extra grote schermen (min-breedte: 1200px) */
+@media screen and (min-width: 1200px) {
+    body {
+        background-size: cover; /* Voor ultrabrede schermen */
+    }
+
+
+}

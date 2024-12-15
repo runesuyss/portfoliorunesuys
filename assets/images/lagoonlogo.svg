@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 350.39 210.04">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 11px;
+      }
+
+      .cls-3 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-5 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-1" width="175.2" height="210.04"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <rect class="cls-1" x="175.2" y="0" width="175.2" height="210.04"/>
+    </clipPath>
+  </defs>
+  <g id="_Mirror_Repeat_" data-name="&amp;lt;Mirror Repeat&amp;gt;">
+    <g class="cls-5">
+      <g>
+        <g>
+          <polygon class="cls-4" points="175.2 104.75 175.2 121.26 17.59 26.26 0 0 6.77 0 175.2 104.75"/>
+          <polygon class="cls-4" points="175.2 137.23 175.2 147.25 37.62 73.89 20.84 51.97 27.88 51.97 175.2 137.23"/>
+        </g>
+        <path class="cls-2" d="M159.12,132.4c-8.02,25.03-32.09,43.2-60.52,43.2-35,0-63.37-27.52-63.37-61.48,0-14.85,5.43-28.48,14.47-39.11"/>
+        <circle class="cls-4" cx="92.71" cy="112.74" r="15.83"/>
+        <polygon class="cls-4" points="175.2 154.1 175.2 210.04 159.12 186.23 175.2 154.1"/>
+      </g>
+    </g>
+  </g>
+  <g id="_Mirror_Repeat_-2" data-name="&amp;lt;Mirror Repeat&amp;gt;">
+    <g class="cls-3">
+      <g>
+        <g>
+          <polygon class="cls-4" points="175.2 104.75 175.2 121.26 332.8 26.26 350.39 0 343.63 0 175.2 104.75"/>
+          <polygon class="cls-4" points="175.2 137.23 175.2 147.25 312.77 73.89 329.55 51.97 322.51 51.97 175.2 137.23"/>
+        </g>
+        <path class="cls-2" d="M191.27,132.4c8.02,25.03,32.09,43.2,60.52,43.2,35,0,63.37-27.52,63.37-61.48,0-14.85-5.43-28.48-14.47-39.11"/>
+        <circle class="cls-4" cx="257.69" cy="112.74" r="15.83"/>
+        <polygon class="cls-4" points="175.2 154.1 175.2 210.04 191.27 186.23 175.2 154.1"/>
+      </g>
+    </g>
+  </g>
+</svg>
