@@ -231,7 +231,6 @@ html {
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border: 2px solid rgba(255, 255, 255, 0.2);
-    padding: px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -248,7 +247,7 @@ html {
     height: auto;
     border-radius: 15px;
     margin: 10px; /* Gelijke ruimte rondom */
-    transition: transform 0.3s ease;
+    transition: transform 0s ease;
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
 }
 
@@ -409,122 +408,243 @@ html {
     max-width: 1100px; /* Beperk de breedte */
     height: auto; /* Zorg dat de inhoud zijn natuurlijke hoogte behoudt */
 
-.klant {
-    display: flex; /* Gebruik Flexbox om de inhoud naast elkaar te plaatsen */
-    padding: 3vh;
-    max-width: 600px;
-    text-align: left;
-    transition: transform 0.3s ease;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(15px);
-    color: white;
-}
-
-.klant:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
-}
-
-.profielfoto {
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    margin-right: 5px; /* Ruimte tussen foto en tekst */
-}
-
-.klant-content {
-    display: flex;
-    flex-direction: column; /* Plaatst naam en review onder elkaar */
-    justify-content: center; /* Centreert verticaal */
-}
-
-.klantnaam {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin: 0;
-}
-
-.review {
-    font-size: 0.6rem;
-    margin: 5px 0 0 0; /* Verklein de bovenste marge */
-    line-height: 1.4;
-}
-
-
-/* Algemene animatie-instellingen */
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Portfoliotekst animatie */
-.homepage .portfoliotekst {
-    animation: fadeInUp 1s ease-out forwards;
-}
-
-/* Beroep animatie */
-.homepage .beroep {
-    animation: fadeInUp 1.5s ease-out forwards;
-}
-
-/* Naam animatie */
-.homepage .name {
-    animation: fadeInUp 2s ease-out forwards;
-}
-
-/* About me animatie */
-.homepage .aboutme {
-    animation: fadeInUp 2.5s ease-out forwards;
-}
-
-/* Toolstitle animatie */
-.homepage .toolstitle {
-    animation: fadeInUp 3s ease-out forwards;
-}
-
-.projects .title {
-    animation: fadeInUp 3.5s ease-out forwards;
-}
-.projects .project {
-    animation: fadeInUp 3.5s ease-out forwards;
-}
-
-
-@media screen and (max-width: 480px)
-{
-    #navbar {
-        width: 40%;
-        padding: 5px;
-        font-size: 0.3rem; /* Verklein de tekst */
+    .klant {
+        display: flex; /* Gebruik Flexbox om de inhoud naast elkaar te plaatsen */
+        padding: 3vh;
+        max-width: 600px;
+        text-align: left;
+        transition: transform 0.3s ease;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 20px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(15px);
+        color: white;
     }
 
-    #navbar a {
-        font-size: 0.3rem;
-        padding: 5px;
+    .klant:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
     }
 
-    .homepage {
-        width: auto;
+    .profielfoto {
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        margin-right: 5px; /* Ruimte tussen foto en tekst */
+    }
+
+    .klant-content {
+        display: flex;
+        flex-direction: column; /* Plaatst naam en review onder elkaar */
+        justify-content: center; /* Centreert verticaal */
+    }
+
+    .klantnaam {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .review {
+        font-size: 0.6rem;
+        margin: 5px 0 0 0; /* Verklein de bovenste marge */
+        line-height: 1.4;
+    }
 
 
+    /* Algemene animatie-instellingen */
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
-    .portfoliotekst {
-        position: absolute;
-        top: -20px;
-        left: 100px;
-        font-size: 200px;
+
+    /* Portfoliotekst animatie */
+    .homepage .portfoliotekst {
+        animation: fadeInUp 1s ease-out forwards;
     }
-}
+
+    /* Beroep animatie */
+    .homepage .beroep {
+        animation: fadeInUp 1.5s ease-out forwards;
+    }
+
+    /* Naam animatie */
+    .homepage .name {
+        animation: fadeInUp 2s ease-out forwards;
+    }
+
+    /* About me animatie */
+    .homepage .aboutme {
+        animation: fadeInUp 2.5s ease-out forwards;
+    }
+
+    /* Toolstitle animatie */
+    .homepage .toolstitle {
+        animation: fadeInUp 3s ease-out forwards;
+    }
+
+    .projects .title {
+        animation: fadeInUp 3.5s ease-out forwards;
+    }
+    .projects .project {
+        animation: fadeInUp 3.5s ease-out forwards;
+    }
+
+
+    @media screen and (max-width: 480px) {
+        /* Algemene instellingen */
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Voorkomt horizontale scroll */
+        }
+
+        /* Navbar */
+        #navbar {
+            width: 80%; /* Breder voor betere zichtbaarheid */
+            padding: 5px;
+            font-size: 0.8rem;
+            text-align: center;
+            top: 2%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #navbar a {
+            font-size: 0.6rem;
+            padding: 5px;
+        }
+
+        /* Homepage */
+        .homepage {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Verticaal centreren */
+            align-items: center; /* Horizontaal centreren */
+            text-align: center;
+            height: 100vh; /* Volledige hoogte */
+            padding: 10px;
+            position: relative;
+        }
+
+        .homepage .portfoliotekst {
+            font-size: 60px;
+            margin-bottom: 10px;
+            position: static; /* Verwijder absolute positioning */
+        }
+
+        .homepage .beroep {
+            font-size: 20px;
+            margin-bottom: 10px;
+            position: static;
+        }
+
+        .homepage .name {
+            font-size: 16px;
+            line-height: 1.2;
+            padding: 5px 10px;
+            margin-bottom: 20px;
+            position: static;
+        }
+
+        .homepage .aboutme {
+            font-size: 12px;
+            width: 90%; /* Verklein breedte voor betere pasvorm */
+            margin-bottom: 20px;
+            position: static;
+        }
+
+        .homepage .toolsimages {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            transform: scale(0.8);
+            position: static;
+        }
+
+        .homepage .toolstitle {
+            font-size: 18px;
+            margin-bottom: 10px;
+            position: static;
+        }
+
+        /* Projecten */
+        .projects {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .projecten {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .projects .project {
+            width: 90%; /* Breedte aanpassen */
+            margin: 0 auto;
+        }
+
+        .projects .title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        /* Eindreflectie */
+        .eindreflectie {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .eindreflectie-container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 100vh;
+        }
+
+        .klanten {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .klant {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .klant-content {
+            text-align: center;
+        }
+    }
+
 }
 
 /* Tabletweergave (max-breedte: 768px) */
@@ -537,7 +657,6 @@ html {
         position: fixed;
         padding: 5px;
         font-size: 0.3rem; /* Verklein de tekst */
-        left: 17%;
         top: 1%;
     }
 
@@ -548,10 +667,9 @@ html {
 
     .homepage {
         background-repeat:no-repeat;
-        background-size: 800px;
         background-position:center;
         height: 400px;
-        width: 135%;
+        width: 100%;
     }
 
     .homepage .portfoliotekst {
@@ -603,14 +721,12 @@ html {
         background-size: 1200px;
         background-position:center;
         height: 800px;
-        width: 135%;
+        width: 100%;
     }
 
     .projecten {
         display: flex;
         flex-direction: column;
-        margin-left: -18%;
-        margin-top: 10%;
     }
 
     .project {
@@ -620,8 +736,7 @@ html {
 
     .projects .title {
         font-size: 1.2rem;
-        position: relative;
-        left: -50px;
+        position: center;
     }
 
     .projects .project {
@@ -632,8 +747,8 @@ html {
         background-repeat:no-repeat;
         background-size: 1200px;
         background-position:center;
-        height: 600px;
-        width: 135%;
+        height: 800px;
+        width: 100%;
     }
 
     .wplopdrachten .title {
@@ -643,9 +758,10 @@ html {
     }
 
     .opdrachten-container {
-        margin-top: 50px;
-        margin-left: -90px;
-        width: 75%
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        width: 100%
     }
 
     .opdracht {
@@ -662,14 +778,15 @@ html {
         background-size: 1600px;
         background-position:center;
         height: 1000px;
-        width: 135%;
+        width: 100%;
     }
 
     .eindreflectie-container {
+        display: flex;
+        flex-direction: column;
         padding: 20px;
-        margin-left: -100px;
-        margin-top: 100px;
-        max-width: 70%;
+        margin-top: 200px;
+        max-width: 100%;
     }
 
     .eindreflectie p {
@@ -687,7 +804,7 @@ html {
         background-size: cover;
         background-position:center;
         height: 800px;
-        width: 135%;
+        width: 100%;
     }
     .testimonials .title {
         font-size: 1.2rem;
